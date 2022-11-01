@@ -21,19 +21,19 @@ const TextWrapper = styled.div`
   }
 
   .box-p {
-    margin-bottom: 2rem;
     > p {
       margin: 5px 0;
     }
   }
 
   .box-btn {
+    margin-top: 4rem;
     > button {
-      font-size: 18px;
-      padding: 12px;
+      font-size: ${({ theme }) => theme.fontSize.size24};
+      padding: 1rem 2rem;
       border-radius: 8px;
       border: none;
-      background-color: #30a499;
+      background-color: ${({ theme }) => theme.colors.teal700};
       color: white;
       cursor: pointer;
     }
