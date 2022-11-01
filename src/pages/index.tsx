@@ -1,11 +1,17 @@
-import type { NextPage } from 'next';
+import type { NextPage } from "next";
+import styled from "styled-components";
+import Home from "../components/Home";
 
-const Home: NextPage = () => {
+const MainContainer = styled.main`
+  width: 100%;
+`;
+
+const Main: NextPage = () => {
   return (
-    <>
-      <div>Home</div>
-    </>
+    <MainContainer>
+      <Home />
+    </MainContainer>
   );
 };
 
-export default Home;
+export default Main;
