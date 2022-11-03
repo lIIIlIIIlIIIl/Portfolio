@@ -1,10 +1,10 @@
+import Link from "next/link";
 import styled from "styled-components";
 import { flexAround, flexCenter } from "../../styles/css-style";
 
 const HeaderContainer = styled.header`
   width: 100%;
   height: 70px;
-  border: 1px solid red;
   ${flexAround}
 `;
 
@@ -15,24 +15,31 @@ const Logo = styled.div`
 
 const Menuitem = styled.nav`
   ${flexCenter}
-  >div {
-    font-weight: 700;
-    line-height: 2rem;
-    padding: 0px 1rem;
-    cursor: pointer;
-  }
+`;
+
+const ChlidA = styled.a`
+  font-weight: 700;
+  line-height: 2rem;
+  padding: 0px 1rem;
+  cursor: pointer;
 `;
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <Logo>DongJae' Portfolio</Logo>
+      <Link href="/">
+        <Logo>DongJae' Portfolio</Logo>
+      </Link>
       <Menuitem>
-        <div>Home</div>
-        <div>About Me</div>
-        <div>Skills</div>
-        <div>Projects</div>
-        <div>Contact</div>
+        <Link href="/about" passHref>
+          <ChlidA>ABOUT</ChlidA>
+        </Link>
+        <Link href="/projects" passHref>
+          <ChlidA>PROJECT</ChlidA>
+        </Link>
+        <Link href="https://github.com/lIIIlIIIlIIIl" replace target="_blank">
+          <ChlidA>GITHUB</ChlidA>
+        </Link>
       </Menuitem>
     </HeaderContainer>
   );
