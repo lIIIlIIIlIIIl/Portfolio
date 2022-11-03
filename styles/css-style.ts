@@ -11,3 +11,8 @@ export const flexAround = css`
   justify-content: space-around;
   align-items: center;
 `;
+
+export const margin75 = css`
+  width: 75%;
+  margin: 0 auto;
+`;
