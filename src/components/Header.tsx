@@ -4,7 +4,7 @@ import { flexAround, flexCenter } from "../../styles/css-style";
 
 const HeaderContainer = styled.header`
   width: 100%;
-  height: 70px;
+  height: 80px;
   ${flexAround}
 `;
 
@@ -36,6 +36,9 @@ const Header = () => {
         </Link>
         <Link href="/projects">
           <ChlidA>PROJECT</ChlidA>
+        </Link>
+        <Link href="/contact">
+          <ChlidA>CONTACT</ChlidA>
         </Link>
         <Link href="https://github.com/lIIIlIIIlIIIl" target="_blank">
           <ChlidA>GITHUB</ChlidA>

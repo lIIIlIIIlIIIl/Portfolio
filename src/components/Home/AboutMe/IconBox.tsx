@@ -14,12 +14,12 @@ const IconBoxContainer = styled.ul<StyledUlProps>`
 `;
 
 const Icon = styled.li`
-  width: 170px;
-  height: 170px;
+  width: 180px;
+  height: 180px;
   padding: 1.5rem;
   border-radius: 100%;
   text-align: center;
-  background-color: ${({ theme }) => theme.colors.black100};
+  border: 2px solid ${({ theme }) => theme.colors.Light_Blue400};
   > img {
     margin-bottom: 9px;
   }
@@ -27,7 +27,7 @@ const Icon = styled.li`
     margin: 0;
     text-align: center;
     font-size: ${({ theme }) => theme.fontSize.size15};
-    color: ${({ theme }) => theme.colors.black500};
+    color: ${({ theme }) => theme.colors.black800};
   }
 `;
 
@@ -41,7 +41,7 @@ const aboutList = [
   {
     src: "/AboutImg/Img02.png",
     alt: "개발자",
-    p1: "상대방을 생각하는",
+    p1: "사용자를 생각하는",
     p2: "개발자",
   },
   {

@@ -20,6 +20,7 @@ const MarginContainer = styled.div`
   .head-text {
     font-size: ${({ theme }) => theme.fontSize.size24};
     font-weight: 350;
+    line-height: 1.5;
   }
   > svg {
     width: 30px;
@@ -36,7 +37,7 @@ const About = () => {
     <Main>
       <PageHead>
         <MarginContainer>
-          <PageIndex />
+          <PageIndex index="소개" />
           <p className="head-text">프론드엔드 개발자</p>
           <p className="head-text">신동재에 대해 알아보세요!</p>
         </MarginContainer>

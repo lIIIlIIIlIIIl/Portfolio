@@ -16,7 +16,7 @@ const Index = styled.ul`
   .index-last {
     position: relative;
     margin-left: 16px;
-    color: ${({ theme }) => theme.colors.teal600};
+    color: ${({ theme }) => theme.colors.Light_Blue400};
   }
 
   .index-icon {
@@ -25,13 +25,17 @@ const Index = styled.ul`
   }
 `;
 
-const PageIndex = () => {
+interface Props {
+  index: string;
+}
+
+const PageIndex = (props: Props) => {
   return (
     <Index>
       <li className="index-first">메인</li>
       <li className="index-last">
         <AiFillCaretRight className="index-icon" size={12} color="#9E9E9E" />
-        소개
+        {props.index}
       </li>
     </Index>
   );

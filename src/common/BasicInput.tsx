@@ -19,7 +19,7 @@ const InputContainer = styled.div`
   }
   > input:focus {
     outline: none;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.teal500};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.Light_Blue400};
   }
 `;
 

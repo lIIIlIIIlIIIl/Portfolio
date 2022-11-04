@@ -8,13 +8,13 @@ declare module "styled-components" {
       desktop: string;
     };
     colors: {
-      teal50: string;
-      teal100: string;
-      teal200: string;
-      teal400: string;
-      teal500: string;
-      teal600: string;
-      teal700: string;
+      Light_Blue50: string;
+      Light_Blue100: string;
+      Light_Blue200: string;
+      Light_Blue400: string;
+      Light_Blue500: string;
+      Light_Blue600: string;
+      Light_Blue700: string;
 
       black100: string;
       black200: string;
@@ -41,6 +41,7 @@ declare module "styled-components" {
       size15: string;
       size18: string;
       size20: string;
+      size22: string;
       size24: string;
       size32: string;
     };

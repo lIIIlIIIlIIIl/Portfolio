@@ -1,6 +1,8 @@
+import React from "react";
 import styled from "styled-components";
+
 import { flexCenter } from "../../../../styles/css-style";
-import IconBox from "./IconBox";
+import ContactForm from "../../../common/ContactForm";
 
 const AboutMeContainer = styled.section`
   width: 100%;
@@ -9,6 +11,7 @@ const AboutMeContainer = styled.section`
 
 const TitleBox = styled.div`
   ${flexCenter}
+  margin-bottom: 30px;
   > div {
     font-size: ${({ theme }) => theme.fontSize.size32};
     font-weight: 700;
@@ -16,15 +19,15 @@ const TitleBox = styled.div`
   }
 `;
 
-const AboutMe = () => {
+const ContactBox = () => {
   return (
     <AboutMeContainer>
       <TitleBox>
-        <div>About Me</div>
+        <div>Contact</div>
       </TitleBox>
-      <IconBox width="75%" />
+      <ContactForm />
     </AboutMeContainer>
   );
 };
 
-export default AboutMe;
+export default ContactBox;
