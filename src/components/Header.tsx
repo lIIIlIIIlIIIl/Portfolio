@@ -17,7 +17,7 @@ const Menuitem = styled.nav`
   ${flexCenter}
 `;
 
-const ChlidA = styled.a`
+const ChlidA = styled.span`
   font-weight: 700;
   line-height: 2rem;
   padding: 0px 1rem;
@@ -31,10 +31,10 @@ const Header = () => {
         <Logo>DongJae' Portfolio</Logo>
       </Link>
       <Menuitem>
-        <Link href="/about" passHref>
+        <Link href="/about">
           <ChlidA>ABOUT</ChlidA>
         </Link>
-        <Link href="/projects" passHref>
+        <Link href="/projects">
           <ChlidA>PROJECT</ChlidA>
         </Link>
         <Link href="https://github.com/lIIIlIIIlIIIl" target="_blank">

@@ -67,7 +67,13 @@ const IconBox = (props: Props) => {
     <IconBoxContainer width={props.width}>
       {aboutList.map(item => (
         <Icon key={item.src}>
-          <Image src={item.src} alt={item.alt} width={80} height={80} />
+          <Image
+            src={item.src}
+            alt={item.alt}
+            width={80}
+            height={80}
+            property="true"
+          />
           <p>{item.p1}</p>
           <p>{item.p2}</p>
         </Icon>

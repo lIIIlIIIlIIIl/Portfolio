@@ -111,8 +111,8 @@ const TextBox = styled.div`
 const Stack = () => {
   return (
     <StackCard>
-      {imgtList.map(img => (
-        <StackBox>
+      {imgtList.map((img, index) => (
+        <StackBox key={index}>
           <ImgBox>
             <Image src={img.src} alt={img.alt} width={36} height={36} />
           </ImgBox>
