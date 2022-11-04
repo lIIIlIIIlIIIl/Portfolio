@@ -31,6 +31,9 @@ const Header = () => {
         <Logo>DongJae' Portfolio</Logo>
       </Link>
       <Menuitem>
+        <Link href="/">
+          <ChlidA>HOME</ChlidA>
+        </Link>
         <Link href="/about">
           <ChlidA>ABOUT</ChlidA>
         </Link>

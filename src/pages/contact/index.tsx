@@ -3,14 +3,15 @@ import styled from "styled-components";
 import Image from "next/image";
 import { flexAround, flexCenter } from "../../../styles/css-style";
 import ContactForm from "../../common/ContactForm";
+import PageIndex from "../../common/PageIndex";
 
 const PageContainer = styled.div`
   width: 100%;
-  padding: 45px 0;
+  padding: 24px 0;
 `;
 
 const ContactContainer = styled.div`
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
 `;
 
@@ -19,8 +20,9 @@ const Name = styled.h1`
 `;
 
 const WhoContainer = styled.div`
+  padding: 0 30px;
   width: 100%;
-  ${flexAround}
+  display: flex;
 `;
 
 const ImgWrapper = styled.div`
@@ -32,6 +34,7 @@ const ImgWrapper = styled.div`
 `;
 
 const TextContainer = styled.div`
+  padding: 60px 40px;
   > h2 {
     margin: 0;
     color: ${({ theme }) => theme.colors.Light_Blue400};
@@ -65,6 +68,7 @@ const Contact = () => {
   return (
     <PageContainer>
       <ContactContainer>
+        <PageIndex index="연락" />
         <Name>신동재</Name>
         <WhoContainer>
           <ImgWrapper>
