@@ -4,7 +4,7 @@ import IconBox from "./IconBox";
 
 const AboutMeContainer = styled.section`
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 60px 40px;
 `;
 
 const TitleBox = styled.div`

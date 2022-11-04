@@ -37,7 +37,7 @@ const Header = () => {
         <Link href="/projects" passHref>
           <ChlidA>PROJECT</ChlidA>
         </Link>
-        <Link href="https://github.com/lIIIlIIIlIIIl" replace target="_blank">
+        <Link href="https://github.com/lIIIlIIIlIIIl" target="_blank">
           <ChlidA>GITHUB</ChlidA>
         </Link>
       </Menuitem>

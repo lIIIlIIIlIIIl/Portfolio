@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
-import AboutMe from "../components/Home/AboutMe/AboutMe";
+import AboutMe from "../components/Home/AboutMe";
+import Contact from "../components/Home/Contact";
 import Home from "../components/Home/Home";
 
 const MainContainer = styled.main`
@@ -12,6 +13,7 @@ const Main: NextPage = () => {
     <MainContainer>
       <Home />
       <AboutMe />
+      <Contact />
     </MainContainer>
   );
 };
