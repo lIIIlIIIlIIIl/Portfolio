@@ -5,6 +5,12 @@ import IconBox from "./IconBox";
 const AboutMeContainer = styled.section`
   width: 100%;
   padding: 60px 40px;
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    padding: 2rem 40px;
+  }
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    padding: 2rem 40px;
+  }
 `;
 
 const TitleBox = styled.div`

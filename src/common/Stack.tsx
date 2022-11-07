@@ -73,6 +73,11 @@ const StackCard = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
+  }
 `;
 
 const StackBox = styled.li`

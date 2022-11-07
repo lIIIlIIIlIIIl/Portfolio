@@ -4,8 +4,20 @@ import Stack from "../../common/Stack";
 
 const Container = styled.div`
   ${margin75}
-  >p {
+  > p {
+    color: #64748b;
     line-height: 1.6;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    width: 90%;
+    > p {
+      margin-bottom: 10px;
+    }
   }
 `;
 

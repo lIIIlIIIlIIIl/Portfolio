@@ -71,6 +71,14 @@ const FormContainer = styled.form`
   padding: 60px 50px;
   border: 1px solid ${({ theme }) => theme.colors.black500};
   border-radius: 5px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    width: 100%;
+  }
 `;
 
 const MessageWrapper = styled.div`

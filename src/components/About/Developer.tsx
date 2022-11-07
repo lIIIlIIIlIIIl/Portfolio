@@ -10,6 +10,22 @@ const Container = styled.div`
   > p {
     line-height: 2;
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    width: 90%;
+    > p {
+      line-height: 1.6;
+      margin-bottom: 5px;
+    }
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    width: 90%;
+    > p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+  }
 `;
 
 const Developer = () => {

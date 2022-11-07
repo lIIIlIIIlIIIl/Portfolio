@@ -7,7 +7,17 @@ const HomeContainer = styled.div`
   padding-top: 40px;
   ${flexCenter}
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 60px 40px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    padding: 2rem 10px;
+    width: 80%;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    padding: 2rem 10px;
+    width: 80%;
+  }
 `;
 
 const TextWrapper = styled.div`
@@ -17,27 +27,63 @@ const TextWrapper = styled.div`
 
     > h1 {
       margin: 0;
+      font-weight: 600;
       line-height: 1.5;
     }
   }
 
   .box-p {
     > p {
-      margin: 5px 0;
-      line-height: 1.6;
+      line-height: 2;
     }
     .box-p-strong {
       font-size: 22px;
       font-weight: 600;
+      padding-left: 8px;
     }
     .box-p-color {
       color: #64748b;
+    }
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    width: 100%;
+    .box-h1 {
+      > :first-child {
+        font-size: 22px;
+      }
+      > :last-child {
+        font-size: 22px;
+      }
+    }
+    .box-p {
+      > p {
+        font-size: 16px;
+        line-height: 2;
+      }
+      .box-p-strong {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .box-p-color {
+        color: #64748b;
+      }
     }
   }
 `;
 
 const ImageWrapper = styled.div`
   width: 40%;
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    display: none;
+  }
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    display: none;
+  }
 `;
 
 const Home = () => {
@@ -45,12 +91,12 @@ const Home = () => {
     <HomeContainer>
       <TextWrapper>
         <div className="box-h1">
-          <h1>Make me happy</h1>
-          <h1>Learn, Solution, Communication</h1>
+          <h1>Makes me happy</h1>
+          <h1>Solution, Learing, Communication</h1>
         </div>
         <div className="box-p">
           <p>
-            안녕하세요!{" "}
+            안녕하세요!
             <span className="box-p-strong">프론트엔드 개발자 신동재</span>
             입니다.
           </p>
@@ -59,7 +105,7 @@ const Home = () => {
           </p>
           <p className="box-p-color">
             사람들과 소통하는 것을 중요하게 생각하며, 함께 일하는 것을
-            좋아합니다
+            좋아합니다.
           </p>
           <p className="box-p-color">
             더 좋은 개발자가 되기 위해 계속해서 공부하고 있습니다.

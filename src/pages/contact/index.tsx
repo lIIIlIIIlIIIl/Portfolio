@@ -13,6 +13,12 @@ const PageContainer = styled.div`
 const ContactContainer = styled.div`
   width: 75%;
   margin: 0 auto;
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    width: 90%;
+  }
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    width: 90%;
+  }
 `;
 
 const Name = styled.h1`
@@ -23,6 +29,9 @@ const WhoContainer = styled.div`
   padding: 0 30px;
   width: 100%;
   display: flex;
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 const ImgWrapper = styled.div`
@@ -62,6 +71,12 @@ const TextContainer = styled.div`
 
 const MessageContainer = styled.div`
   padding: 50px 0;
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    width: 90%;
+  }
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    width: 90%;
+  }
 `;
 
 const Contact = () => {
@@ -106,9 +121,8 @@ const Contact = () => {
             아래 양식에 맞게 작성하신 후 보내주시면, 3일 이내에 회신하겠습니다
           </p>
         </MessageContainer>
+        <ContactForm />
       </ContactContainer>
-
-      <ContactForm />
     </PageContainer>
   );
 };

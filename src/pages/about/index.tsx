@@ -26,6 +26,9 @@ const MarginContainer = styled.div`
     width: 30px;
     height: 30px;
   }
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    width: 90%;
+  }
 `;
 
 const IntroduceContainer = styled.div`
@@ -43,7 +46,7 @@ const About = () => {
         </MarginContainer>
       </PageHead>
       <MarginContainer>
-        <IconBox />
+        <IconBox width="75%" />
       </MarginContainer>
       <IntroduceContainer>
         <Developer />

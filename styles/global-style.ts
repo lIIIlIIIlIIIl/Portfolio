@@ -28,6 +28,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+@media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+html, body{
+min-width: ${({ theme }) => theme.breakPoints.mobile};
+}
+}
 `;
 
 // @media (prefers-color-scheme: dark) {

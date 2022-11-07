@@ -11,6 +11,17 @@ const IconBoxContainer = styled.ul<StyledUlProps>`
   margin: 0 auto;
   padding: 60px 0;
   ${flexAround};
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    width: 100%;
+    padding: 32px 0;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+    padding: 32px 0;
+  }
 `;
 
 const Icon = styled.li`
@@ -28,6 +39,17 @@ const Icon = styled.li`
     text-align: center;
     font-size: ${({ theme }) => theme.fontSize.size15};
     color: ${({ theme }) => theme.colors.black800};
+  }
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+    width: 160px;
+    height: 160px;
+    > img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    margin-bottom: 1rem;
   }
 `;
 
