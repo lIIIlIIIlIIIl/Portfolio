@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 import { flexAround } from "../../../../styles/css-style";
+import { aboutList } from "../../../assets/data";
 
 interface StyledUlProps {
   width?: string;
@@ -52,33 +53,6 @@ const Icon = styled.li`
     margin-bottom: 1rem;
   }
 `;
-
-const aboutList = [
-  {
-    src: "/AboutImg/Img01.png",
-    alt: "전문분야",
-    p1: "전문분야",
-    p2: "프론트엔드",
-  },
-  {
-    src: "/AboutImg/Img02.png",
-    alt: "개발자",
-    p1: "사용자를 생각하는",
-    p2: "개발자",
-  },
-  {
-    src: "/AboutImg/Img03.png",
-    alt: "성장",
-    p1: "핵심가치",
-    p2: "성장",
-  },
-  {
-    src: "/AboutImg/Img04.png",
-    alt: "열정",
-    p1: "강한",
-    p2: "의지﹢열정",
-  },
-];
 
 interface Props {
   width?: string;
