@@ -1,27 +1,28 @@
 import styled from "styled-components";
-import { flexCenter } from "../../../styles/css-style";
+import {
+  flexAround,
+  media_desktop1,
+  media_desktop2,
+  media_tablet1,
+  media_tablet2,
+} from "../../../styles/css-style";
 import MyAnimation from "./Animation";
 
 const HomeContainer = styled.div`
-  width: 75%;
-  padding-top: 40px;
-  ${flexCenter}
+  width: 1280px;
+  ${flexAround}
   margin: 0 auto;
-  padding: 60px 40px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    padding: 2rem 10px;
-    width: 80%;
-  }
+  ${media_desktop2}
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    padding: 2rem 10px;
-    width: 80%;
-  }
+  ${media_desktop1}
+
+  ${media_tablet2}
+
+  ${media_tablet1}
 `;
 
 const TextWrapper = styled.div`
-  width: 60%;
   .box-h1 {
     margin-bottom: 2rem;
 
@@ -34,7 +35,7 @@ const TextWrapper = styled.div`
 
   .box-p {
     > p {
-      line-height: 2;
+      line-height: 1.8;
     }
     .box-p-strong {
       font-size: 22px;
@@ -46,42 +47,36 @@ const TextWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+  @media screen and (max-width: 890px) {
     width: 100%;
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    width: 100%;
     .box-h1 {
-      > :first-child {
-        font-size: 22px;
-      }
       > :last-child {
-        font-size: 22px;
+        font-size: 24px;
       }
     }
-    .box-p {
-      > p {
-        font-size: 16px;
-        line-height: 2;
-      }
-      .box-p-strong {
-        font-size: 18px;
-        font-weight: 600;
-      }
-      .box-p-color {
-        color: #64748b;
-      }
+
+    .box-p-strong {
+      font-size: 18px;
+      font-weight: 600;
     }
   }
 `;
 
 const ImageWrapper = styled.div`
-  width: 40%;
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    display: none;
+  width: 480px;
+  height: 480px;
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.desktop1}) {
+    width: 400px;
+    height: 400px;
   }
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.desktop2}) {
+    width: 320px;
+    height: 320px;
+  }
+  @media screen and (max-width: 890px) {
     display: none;
   }
 `;

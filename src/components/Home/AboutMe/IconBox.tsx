@@ -1,27 +1,39 @@
 import Image from "next/image";
 import styled from "styled-components";
-import { flexAround } from "../../../../styles/css-style";
+import {
+  media_desktop1,
+  media_desktop2,
+  media_tablet1,
+  media_tablet2,
+} from "../../../../styles/css-style";
 import { aboutList } from "../../../assets/data";
 
-interface StyledUlProps {
-  width?: string;
-}
+const IconWrapper = styled.div`
+  width: 1280px;
 
-const IconBoxContainer = styled.ul<StyledUlProps>`
-  width: ${({ width }) => (width ? width : "100%")};
+  ${media_desktop2}
+
+  ${media_desktop1}
+
+  ${media_tablet2}
+
+  ${media_tablet1}
+`;
+
+const IconBoxContainer = styled.ul`
+  width: 90%;
   margin: 0 auto;
   padding: 60px 0;
-  ${flexAround};
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    width: 100%;
-    padding: 32px 0;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet2}) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 16px;
-    padding: 32px 0;
+    place-items: center;
+    grid-gap: 24px;
+    padding: 30px 0;
   }
 `;
 
@@ -41,7 +53,7 @@ const Icon = styled.li`
     font-size: ${({ theme }) => theme.fontSize.size15};
     color: ${({ theme }) => theme.colors.black800};
   }
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     width: 160px;
     height: 160px;
     > img {
@@ -49,7 +61,7 @@ const Icon = styled.li`
       height: 60px;
     }
   }
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     margin-bottom: 1rem;
   }
 `;
@@ -60,21 +72,23 @@ interface Props {
 
 const IconBox = (props: Props) => {
   return (
-    <IconBoxContainer width={props.width}>
-      {aboutList.map(item => (
-        <Icon key={item.src}>
-          <Image
-            src={item.src}
-            alt={item.alt}
-            width={80}
-            height={80}
-            property="true"
-          />
-          <p>{item.p1}</p>
-          <p>{item.p2}</p>
-        </Icon>
-      ))}
-    </IconBoxContainer>
+    <IconWrapper>
+      <IconBoxContainer>
+        {aboutList.map(item => (
+          <Icon key={item.src}>
+            <Image
+              src={item.src}
+              alt={item.alt}
+              width={80}
+              height={80}
+              property="true"
+            />
+            <p>{item.p1}</p>
+            <p>{item.p2}</p>
+          </Icon>
+        ))}
+      </IconBoxContainer>
+    </IconWrapper>
   );
 };
 

@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
 import Image from "next/image";
-import { flexAround, flexCenter } from "../../../styles/css-style";
+import { flexCenter } from "../../../styles/css-style";
 import ContactForm from "../../common/ContactForm";
 import PageIndex from "../../common/PageIndex";
+import {
+  media_desktop1,
+  media_desktop2,
+  media_tablet1,
+  media_tablet2,
+} from "../../../styles/css-style";
 
 const PageContainer = styled.div`
   width: 100%;
@@ -11,14 +17,16 @@ const PageContainer = styled.div`
 `;
 
 const ContactContainer = styled.div`
-  width: 75%;
+  width: 1280px;
   margin: 0 auto;
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    width: 90%;
-  }
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    width: 90%;
-  }
+
+  ${media_desktop2}
+
+  ${media_desktop1}
+
+  ${media_tablet2}
+
+  ${media_tablet1}
 `;
 
 const Name = styled.h1`
@@ -26,18 +34,32 @@ const Name = styled.h1`
 `;
 
 const WhoContainer = styled.div`
+  width: 1280px;
   padding: 0 30px;
-  width: 100%;
   display: flex;
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+  justify-content: flex-start;
+
+  ${media_desktop2}
+
+  ${media_desktop1}
+
+  ${media_tablet2}
+
+  ${media_tablet1}
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     flex-direction: column;
   }
 `;
 
 const ImgWrapper = styled.div`
-  ${flexCenter}
   padding: 30px 0;
+  display: flex;
+  justify-content: center;
   > img {
+    display: block;
+    width: 240px;
+    height: 290px;
     border-radius: 100%;
   }
 `;
@@ -71,12 +93,6 @@ const TextContainer = styled.div`
 
 const MessageContainer = styled.div`
   padding: 50px 0;
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    width: 90%;
-  }
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    width: 90%;
-  }
 `;
 
 const Contact = () => {
@@ -87,7 +103,7 @@ const Contact = () => {
         <Name>신동재</Name>
         <WhoContainer>
           <ImgWrapper>
-            <Image src="/me.JPG" alt="user" width={240} height={290} />
+            <img src="/me.JPG" alt="user" />
           </ImgWrapper>
           <TextContainer>
             <h2>Contact.·.·</h2>

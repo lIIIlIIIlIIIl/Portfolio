@@ -1,9 +1,14 @@
 import styled from "styled-components";
-import { margin75 } from "../../../styles/css-style";
+import {
+  media_desktop2,
+  media_desktop1,
+  media_tablet2,
+  media_tablet1,
+} from "../../../styles/css-style";
 
 const Container = styled.div`
-  width: 100%;
-  ${margin75}
+  width: 1280px;
+  margin: 0 auto;
   > h2 {
     margin-top: 0;
   }
@@ -11,21 +16,13 @@ const Container = styled.div`
     line-height: 2;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    width: 90%;
-    > p {
-      line-height: 1.6;
-      margin-bottom: 5px;
-    }
-  }
+  ${media_desktop2}
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    width: 90%;
-    > p {
-      line-height: 1.6;
-      margin-bottom: 10px;
-    }
-  }
+  ${media_desktop1}
+
+  ${media_tablet2}
+
+  ${media_tablet1}
 `;
 
 const Developer = () => {

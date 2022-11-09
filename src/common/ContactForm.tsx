@@ -66,17 +66,22 @@ const ContactForm = () => {
 };
 
 const FormContainer = styled.form`
-  width: 35%;
+  width: 40%;
   margin: 0 auto;
-  padding: 60px 50px;
+  padding: 60px 45px;
   border: 1px solid ${({ theme }) => theme.colors.black500};
   border-radius: 5px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    width: 60%;
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet2}) {
+    width: 50%;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet1}) {
+    width: 80%;
+    padding: 60px 30px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     width: 100%;
   }
 `;

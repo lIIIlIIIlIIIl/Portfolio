@@ -1,22 +1,41 @@
 import Image from "next/image";
+import Link from "next/link";
 import styled from "styled-components";
 import { cardList } from "../assets/data";
+import {
+  flexCenter,
+  media_desktop1,
+  media_desktop2,
+  media_tablet1,
+  media_tablet2,
+} from "../../styles/css-style";
 
-const Catainer = styled.div`
-  width: 90%;
+const Container = styled.div`
+  width: 1280px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 16px;
+
+  ${media_desktop2}
+
+  ${media_desktop1}
+
+  ${media_tablet2}
+
+  ${media_tablet1}
+`;
+
+const CardWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const CardContainer = styled.div`
-  width: 380px;
+  width: calc(33.333% - 60px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 16px;
   background-color: white;
+  margin: 20px;
   box-shadow: rgb(15 15 15 / 10%) 0px 0px 0px 1px,
     rgb(15 15 15 / 10%) 0px 2px 4px;
   cursor: pointer;
@@ -24,12 +43,18 @@ const CardContainer = styled.div`
     transition: all 0.2s ease-out;
     transform: scale(1.2);
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.desktop1}) {
+    width: calc(50% - 60px);
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet1}) {
+    width: 100%;
+  }
 `;
 
 const ImgWrapper = styled.div`
   padding: 10px;
-  width: 100%;
-  height: 100%;
   > img {
     width: 100%;
     height: 100%;
@@ -66,26 +91,30 @@ const StacksLi = styled.li<{ background: string }>`
 
 const Card = () => {
   return (
-    <Catainer>
-      {cardList.map((el, index) => (
-        <CardContainer key={index}>
-          <ImgWrapper>
-            <img src={el.src}></img>
-          </ImgWrapper>
-          <TextContainer>
-            <Title>{el.title}</Title>
-            <Explanation>{el.explanation}</Explanation>
-            <Stacks>
-              {el.stack.map((el, index) => (
-                <StacksLi background={el.color} key={index}>
-                  {el.name}
-                </StacksLi>
-              ))}
-            </Stacks>
-          </TextContainer>
-        </CardContainer>
-      ))}
-    </Catainer>
+    <Container>
+      <CardWrapper>
+        {cardList.map((el, index) => (
+          <CardContainer key={index}>
+            <Link href={`/project/${el.name}`}>
+              <ImgWrapper>
+                <img src={el.src}></img>
+              </ImgWrapper>
+              <TextContainer>
+                <Title>{el.title}</Title>
+                <Explanation>{el.explanation}</Explanation>
+                <Stacks>
+                  {el.stack.map((el, index) => (
+                    <StacksLi background={el.color} key={index}>
+                      {el.name}
+                    </StacksLi>
+                  ))}
+                </Stacks>
+              </TextContainer>
+            </Link>
+          </CardContainer>
+        ))}
+      </CardWrapper>
+    </Container>
   );
 };
 

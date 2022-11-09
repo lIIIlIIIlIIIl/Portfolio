@@ -2,8 +2,13 @@ import styled from "styled-components";
 import IconBox from "../../components/Home/AboutMe/IconBox";
 import Developer from "../../components/About/Developer";
 import PageIndex from "../../common/PageIndex";
-import { margin75 } from "../../../styles/css-style";
 import Stacks from "../../components/About/Stacks";
+import {
+  media_desktop1,
+  media_desktop2,
+  media_tablet1,
+  media_tablet2,
+} from "../../../styles/css-style";
 
 const Main = styled.main`
   width: 100%;
@@ -16,7 +21,9 @@ const PageHead = styled.div`
 `;
 
 const MarginContainer = styled.div`
-  ${margin75}
+  width: 1280px;
+  margin: 0 auto;
+
   .head-text {
     font-size: ${({ theme }) => theme.fontSize.size24};
     font-weight: 350;
@@ -26,13 +33,18 @@ const MarginContainer = styled.div`
     width: 30px;
     height: 30px;
   }
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    width: 90%;
-  }
+
+  ${media_desktop2}
+
+  ${media_desktop1}
+
+  ${media_tablet2}
+
+  ${media_tablet1}
 `;
 
 const IntroduceContainer = styled.div`
-  padding: 60px 0;
+  padding: 40px 0;
 `;
 
 const About = () => {
@@ -46,7 +58,7 @@ const About = () => {
         </MarginContainer>
       </PageHead>
       <MarginContainer>
-        <IconBox width="75%" />
+        <IconBox />
       </MarginContainer>
       <IntroduceContainer>
         <Developer />

@@ -1,59 +1,58 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { flexAround, flexCenter } from "../../styles/css-style";
+import {
+  flexCenter,
+  media_desktop1,
+  media_desktop2,
+  media_tablet1,
+  media_tablet2,
+} from "../../styles/css-style";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { useState } from "react";
 
 const HeaderWapper = styled.header`
-  width: 100%;
   height: 80px;
-  display: flex;
 `;
 
 const HeaderContainer = styled.div`
-  width: 75%;
+  width: 1280px;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    width: 90%;
-  }
+  ${media_desktop2}
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    width: 90%;
-  }
+  ${media_desktop1}
+
+  ${media_tablet2}
+
+  ${media_tablet1}
 `;
 
 const Logo = styled.div`
   font-weight: 900;
   font-size: 1.8rem;
-
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    font-size: 1.3rem;
-  }
-
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    font-size: 1.3rem;
-  }
 `;
 
 const NavMenu = styled.div`
   display: none;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet2}) {
     display: block;
+    cursor: pointer;
   }
 `;
 
-const Menuitem = styled.nav`
+const Menuitem = styled.nav<{ visible: boolean }>`
   ${flexCenter}
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet2}) {
     flex-direction: column;
+    text-align: center;
     position: absolute;
     right: 0;
     top: 60px;
@@ -62,26 +61,27 @@ const Menuitem = styled.nav`
     background-color: #ffffff;
     box-shadow: rgb(0 0 0 / 4%) 0px 3px 6px 0px,
       rgb(0 0 0 / 4%) 0px -1px 1px 0px inset;
+    cursor: pointer;
+    @media (max-width: ${({ theme }) => theme.breakPoints.tablet2}) {
+      display: ${({ visible }) => (visible ? "block" : "none")};
+    }
   }
 `;
 
-const NavLink = styled(Link)<{ display: boolean }>`
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    display: ${({ display }) => (display ? "block" : "none")};
-  }
+const NavLink = styled(Link)`
+  padding: 8px 16px;
 `;
 
 const ChlidA = styled.span`
   font-weight: 700;
-  padding: 0 1rem;
   cursor: pointer;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    padding: 0 0.5rem;
+  :hover {
+    color: ${({ theme }) => theme.colors.Light_Blue400};
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    line-height: 1.6;
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet2}) {
+    line-height: 2;
   }
 `;
 
@@ -98,21 +98,20 @@ const Header = () => {
         <NavMenu onClick={onClickHandler}>
           {openMenu ? <MdClose size={20} /> : <FiMenu size={20} />}
         </NavMenu>
-        <Menuitem>
-          <NavLink display={openMenu} href="/" onClick={onClickHandler}>
+        <Menuitem visible={openMenu}>
+          <NavLink href="/" onClick={onClickHandler}>
             <ChlidA>HOME</ChlidA>
           </NavLink>
-          <NavLink display={openMenu} href="/about" onClick={onClickHandler}>
+          <NavLink href="/about" onClick={onClickHandler}>
             <ChlidA>ABOUT</ChlidA>
           </NavLink>
-          <NavLink display={openMenu} href="/projects" onClick={onClickHandler}>
+          <NavLink href="/project" onClick={onClickHandler}>
             <ChlidA>PROJECT</ChlidA>
           </NavLink>
-          <NavLink display={openMenu} href="/contact" onClick={onClickHandler}>
+          <NavLink href="/contact" onClick={onClickHandler}>
             <ChlidA>CONTACT</ChlidA>
           </NavLink>
           <NavLink
-            display={openMenu}
             href="https://github.com/lIIIlIIIlIIIl"
             target="_blank"
             onClick={onClickHandler}

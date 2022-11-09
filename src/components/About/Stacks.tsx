@@ -1,24 +1,27 @@
 import styled from "styled-components";
-import { margin75 } from "../../../styles/css-style";
+import {
+  media_desktop1,
+  media_desktop2,
+  media_tablet1,
+  media_tablet2,
+} from "../../../styles/css-style";
 import Stack from "../../common/Stack";
 
 const Container = styled.div`
-  ${margin75}
+  width: 1280px;
+  margin: 0 auto;
   > p {
     color: #64748b;
     line-height: 1.6;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    width: 90%;
-  }
+  ${media_desktop2}
 
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    width: 90%;
-    > p {
-      margin-bottom: 10px;
-    }
-  }
+  ${media_desktop1} 
+
+  ${media_tablet2}
+
+  ${media_tablet1}
 `;
 
 const StackContainer = styled.div`

@@ -4,8 +4,10 @@ declare module "styled-components" {
   export interface DefaultTheme {
     breakPoints: {
       mobile: string;
-      tablet: string;
-      desktop: string;
+      tablet1: string;
+      tablet2: string;
+      desktop1: string;
+      desktop2: string;
     };
     colors: {
       Light_Blue50: string;

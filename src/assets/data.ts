@@ -1,6 +1,7 @@
 export const cardList = [
   {
     src: "/Project/mainProject.png",
+    name: "herehere",
     alt: "여기여기 붙어라",
     title: "여기여기 붙어라",
     explanation:
@@ -16,6 +17,7 @@ export const cardList = [
   },
   {
     src: "/Project/Portfolio.png",
+    name: "dongjae_portfolio",
     alt: "포트폴리오",
     title: "포트폴리오",
     explanation:
@@ -29,6 +31,7 @@ export const cardList = [
   },
   {
     src: "/Project/Portfolio.png",
+    name: "code_review",
     alt: "제작중...",
     title: "제작중...",
     explanation: "진행 중인 프로젝트 입니다.",
