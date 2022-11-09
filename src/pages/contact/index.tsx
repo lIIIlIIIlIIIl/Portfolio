@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import Image from "next/image";
-import { flexCenter } from "../../../styles/css-style";
 import ContactForm from "../../common/ContactForm";
 import PageIndex from "../../common/PageIndex";
 import {

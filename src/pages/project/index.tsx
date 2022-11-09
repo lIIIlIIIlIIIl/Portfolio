@@ -3,20 +3,28 @@ import Card from "../../common/Card";
 
 import PageIndex from "../../common/PageIndex";
 
+import {
+  media_desktop1,
+  media_desktop2,
+  media_tablet1,
+  media_tablet2,
+} from "../../../styles/css-style";
+
 const PageContainer = styled.div`
-  width: 100%;
   padding: 24px 0;
 `;
 
 const ContactContainer = styled.div`
-  width: 75%;
+  width: 1280px;
   margin: 0 auto;
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.tablet}) {
-    width: 90%;
-  }
-  @media screen and (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    width: 90%;
-  }
+
+  ${media_desktop2}
+
+  ${media_desktop1}
+
+  ${media_tablet2}
+
+  ${media_tablet1}
 `;
 
 const Title = styled.div`
@@ -25,6 +33,12 @@ const Title = styled.div`
     font-weight: 500;
     line-height: 1.5;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    > h2 {
+      font-size: 20px;
+    }
+  } ;
 `;
 
 const Project = () => {
