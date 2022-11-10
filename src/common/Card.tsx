@@ -95,7 +95,7 @@ const Card = () => {
       <CardWrapper>
         {cardList.map((el, index) => (
           <CardContainer key={index}>
-            <Link href={`/project/${el.name}`}>
+            <Link href={el.link} target="_blank">
               <ImgWrapper>
                 <img src={el.src}></img>
               </ImgWrapper>

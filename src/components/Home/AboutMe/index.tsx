@@ -10,9 +10,9 @@ import IconBox from "./IconBox";
 
 const Page = styled.section`
   width: 100%;
-  padding: 28px 80px;
+  padding: 60px 80px;
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.tablet2}) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.tablet1}) {
     padding: 28px 0;
   } ;
 `;
