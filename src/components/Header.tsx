@@ -65,7 +65,7 @@ const Menuitem = styled.nav<{ visible: boolean }>`
     text-align: center;
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 80px;
     width: 100%;
     z-index: 1;
     background-color: #ffffff;

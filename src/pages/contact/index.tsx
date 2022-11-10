@@ -87,6 +87,10 @@ const TextContainer = styled.div`
   .h2_margin {
     margin-top: 30px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    padding: 30px 0;
+  }
 `;
 
 const MessageContainer = styled.div`

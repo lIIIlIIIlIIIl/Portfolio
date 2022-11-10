@@ -66,8 +66,8 @@ export const aboutList = [
   {
     src: "/AboutImg/Img04.png",
     alt: "열정",
-    p1: "강한",
-    p2: "의지﹢열정",
+    p1: "무너지지 않는",
+    p2: "정신력",
   },
 ];
 
