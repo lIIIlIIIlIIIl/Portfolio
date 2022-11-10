@@ -34,8 +34,18 @@ const HeaderContainer = styled.div`
 `;
 
 const Logo = styled.div`
-  font-weight: 900;
-  font-size: 1.8rem;
+  width: 300px;
+  padding-top: 10px;
+
+  > a {
+    cursor: pointer;
+    > img {
+      width: 100%;
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    width: 250px;
+  }
 `;
 
 const NavMenu = styled.div`
@@ -92,9 +102,11 @@ const Header = () => {
   return (
     <HeaderWapper>
       <HeaderContainer>
-        <Link href="/">
-          <Logo>DongJae's Portfolio</Logo>
-        </Link>
+        <Logo>
+          <Link href="/">
+            <img src="/Project/02.png" />
+          </Link>
+        </Logo>
         <NavMenu onClick={onClickHandler}>
           {openMenu ? <MdClose size={20} /> : <FiMenu size={20} />}
         </NavMenu>
