@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import BasicInput from "./BasicInput";
 import useInput from "../hooks/useInput";
 import useTextarea from "../hooks/useTextarea";
+import { useRef } from "react";
 
 const ContactForm = () => {
   const name = useInput("");
@@ -11,6 +12,11 @@ const ContactForm = () => {
   const email = useInput("");
   const message = useTextarea("");
   const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+
+  const nameRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
 
   const onSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -24,28 +30,35 @@ const ContactForm = () => {
       .send("service_0y46jwb", "template_wto205k", body, PUBLIC_KEY)
       .then(res => {
         alert("이메일을 보내주심에 감사합니다. 3일 이내에 회신하겠습니다.");
+        name.value = "";
+        phone.value = "";
+        email.value = "";
+        message.value = "";
+        nameRef.current!.value = "";
+        phoneRef.current!.value = "";
+        emailRef.current!.value = "";
+        messageRef.current!.value = "";
       });
-    name.value = "";
-    phone.value = "";
-    email.value = "";
-    message.value = "";
   };
 
   return (
     <FormContainer onSubmit={onSubmitHandler}>
       <BasicInput
+        useRef={nameRef}
         type="text"
         placeHloder="이름을 입력해주세요"
         onChangeHandler={name.onChange}
         value={name.value}
       />
       <BasicInput
+        useRef={phoneRef}
         type="text"
         placeHloder="전화번호를 입력해주세요"
         onChangeHandler={phone.onChange}
         value={phone.value}
       />
       <BasicInput
+        useRef={emailRef}
         type="email"
         placeHloder="이메일을 입력해주세요"
         onChangeHandler={email.onChange}
@@ -53,6 +66,7 @@ const ContactForm = () => {
       />
       <MessageWrapper>
         <textarea
+          ref={messageRef}
           placeholder="메시지를 입력해주세요"
           onChange={message.onChange}
           value={message.value}

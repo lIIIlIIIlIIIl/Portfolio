@@ -28,12 +28,14 @@ interface Props {
   type: string;
   onChangeHandler: (event: React.ChangeEvent<HTMLInputElement>) => void;
   value: string;
+  useRef: React.ForwardedRef<HTMLInputElement>;
 }
 
 const BasicInput = (props: Props) => {
   return (
     <InputContainer>
       <input
+        ref={props.useRef}
         placeholder={props.placeHloder}
         type={props.type}
         onChange={props.onChangeHandler}
