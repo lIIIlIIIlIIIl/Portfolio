@@ -32,12 +32,13 @@ export const cardList = [
     ],
   },
   {
-    src: "/Project/Portfolio.png",
+    src: "/Project/00.png",
     name: "code_review",
     alt: "제작중...",
-    title: "제작중...",
-    explanation: "진행 중인 프로젝트 입니다.",
-    link: "/",
+    title: "Code Review Community",
+    explanation:
+      "시니어 개발자에게 자신의 코드를 보여주고 피드백을 받아 볼 수 있는 코드리뷰 서비스를 제공",
+    link: "https://www.notion.so/Code-Review-Community-a3f5b6d557a049d09fa48b4a32356a5a",
     stack: [
       { name: "NextJS", color: "#DBECDA" },
       { name: "TypeScript", color: "#D2E4EF" },

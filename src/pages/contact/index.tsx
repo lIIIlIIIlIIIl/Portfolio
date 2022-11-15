@@ -136,7 +136,7 @@ const Contact = () => {
         <MessageContainer>
           <h2>Sending Email</h2>
           <p>
-            아래 양식에 맞게 작성하신 후 보내주시면, 3일 이내에 회신하겠습니다
+            아래 양식에 맞게 작성하신 후 보내주시면, 3일 이내에 회신하겠습니다.
           </p>
         </MessageContainer>
         <ContactForm />

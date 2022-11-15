@@ -42,9 +42,6 @@ const TextWrapper = styled.div`
       font-weight: 600;
       padding-left: 8px;
     }
-    .box-p-color {
-      color: #64748b;
-    }
   }
 
   @media screen and (max-width: 890px) {
@@ -95,16 +92,12 @@ const Home = () => {
             <span className="box-p-strong">프론트엔드 개발자 신동재</span>
             입니다.
           </p>
-          <p className="box-p-color">
-            배운 것을 시도하고, 문제 해결하는 것이 즐겁습니다.
-          </p>
-          <p className="box-p-color">
+          <p>배운 것을 시도하고, 문제 해결하는 것이 즐겁습니다.</p>
+          <p>
             사람들과 소통하는 것을 중요하게 생각하며, 함께 일하는 것을
             좋아합니다.
           </p>
-          <p className="box-p-color">
-            더 좋은 개발자가 되기 위해 계속해서 공부하고 있습니다.
-          </p>
+          <p>더 좋은 개발자가 되기 위해 계속해서 공부하고 있습니다.</p>
         </div>
       </TextWrapper>
       <ImageWrapper>

@@ -11,7 +11,6 @@ const Container = styled.div`
   width: 1280px;
   margin: 0 auto;
   > p {
-    color: #64748b;
     line-height: 1.6;
   }
 

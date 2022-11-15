@@ -55,9 +55,13 @@ const CardContainer = styled.div`
 
 const ImgWrapper = styled.div`
   padding: 10px;
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   > img {
     width: 100%;
-    height: 100%;
   }
 `;
 
@@ -67,7 +71,7 @@ const TextContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  margin: 5px 0;
+  margin: 10px 0;
 `;
 
 const Explanation = styled.div`
