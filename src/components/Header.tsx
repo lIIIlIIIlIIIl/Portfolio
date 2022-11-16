@@ -9,10 +9,19 @@ import {
 } from "../../styles/css-style";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const HeaderWapper = styled.header`
   height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  transition: 0.5s ease;
+  &.hide {
+    transform: translateY(-80px);
+  }
 `;
 
 const HeaderContainer = styled.div`
@@ -97,10 +106,46 @@ const ChlidA = styled.span`
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [hide, setHide] = useState(false);
+  const [pageY, setPageY] = useState(0);
+  const layoutRef = useRef<HTMLDivElement>(null);
+
+  let documentRef: React.MutableRefObject<Document>;
+  if (typeof document !== "undefined") {
+    documentRef = useRef(document);
+  }
+
+  const throttle = (callback: () => void, waitTime: number) => {
+    let timerId: NodeJS.Timeout | null = null;
+    return (e: any) => {
+      if (timerId) return;
+      timerId = setTimeout(() => {
+        callback.call(e);
+        timerId = null;
+      }, waitTime);
+    };
+  };
+
+  const handleScroll = () => {
+    const { pageYOffset } = window;
+    const deltaY = pageYOffset - pageY;
+    const hide = pageYOffset !== 0 && deltaY >= 0;
+    setHide(hide);
+    setPageY(pageYOffset);
+  };
+
+  const throttleScroll = throttle(handleScroll, 50);
+
+  useEffect(() => {
+    documentRef.current.addEventListener("scroll", throttleScroll);
+    return () =>
+      documentRef.current.removeEventListener("scroll", throttleScroll);
+  }, [pageY]);
+
   const onClickHandler = () => setOpenMenu(!openMenu);
 
   return (
-    <HeaderWapper>
+    <HeaderWapper className={hide ? "hide" : ""} ref={layoutRef}>
       <HeaderContainer>
         <Logo>
           <Link href="/">

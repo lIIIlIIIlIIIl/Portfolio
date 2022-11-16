@@ -4,7 +4,7 @@ import { normalize } from "styled-normalize";
 export const GlobalStyle = createGlobalStyle`
 html, body{
     margin: 0;
-    padding: 0;
+    padding: 50px 0 0 0;
 }
 
 * {
@@ -34,12 +34,3 @@ min-width: ${({ theme }) => theme.breakPoints.mobile};
 }
 }
 `;
-
-// @media (prefers-color-scheme: dark) {
-//     html {
-//       color-scheme: dark;
-//     }
-//     body {
-//       color: white;
-//       background: black;
-//     }
