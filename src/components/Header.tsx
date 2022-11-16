@@ -19,6 +19,7 @@ const HeaderWapper = styled.header`
   width: 100%;
   background-color: white;
   transition: 0.5s ease;
+  z-index: 1;
   &.hide {
     transform: translateY(-80px);
   }
