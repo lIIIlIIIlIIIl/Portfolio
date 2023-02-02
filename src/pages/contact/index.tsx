@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import ContactForm from "../../common/ContactForm";
 import PageIndex from "../../common/PageIndex";
 import {
   media_desktop1,
@@ -35,7 +34,8 @@ const WhoContainer = styled.div`
   width: 1280px;
   padding: 0 30px;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
 
   ${media_desktop2}
 
@@ -64,6 +64,7 @@ const ImgWrapper = styled.div`
 
 const TextContainer = styled.div`
   padding: 60px 40px;
+
   > h2 {
     margin: 0;
     color: ${({ theme }) => theme.colors.Light_Blue400};
@@ -93,20 +94,17 @@ const TextContainer = styled.div`
   }
 `;
 
-const MessageContainer = styled.div`
-  padding: 50px 0;
-`;
-
 const Contact = () => {
   return (
     <PageContainer>
       <ContactContainer>
         <PageIndex index="연락" />
-        <Name>신동재</Name>
         <WhoContainer>
           <ImgWrapper>
             <img src="/me.JPG" alt="user" />
           </ImgWrapper>
+          <Name>신동재</Name>
+
           <TextContainer>
             <h2>Contact.·.·</h2>
             <div>
@@ -133,13 +131,6 @@ const Contact = () => {
             </div>
           </TextContainer>
         </WhoContainer>
-        <MessageContainer>
-          <h2>Sending Email</h2>
-          <p>
-            아래 양식에 맞게 작성하신 후 보내주시면, 3일 이내에 회신하겠습니다.
-          </p>
-        </MessageContainer>
-        <ContactForm />
       </ContactContainer>
     </PageContainer>
   );
