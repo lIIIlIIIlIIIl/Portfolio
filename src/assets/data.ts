@@ -32,6 +32,21 @@ export const cardList = [
     ],
   },
   {
+    src: "/Project/03.png",
+    name: "Chatting App",
+    alt: "Chatting App",
+    title: "Chatting App",
+    explanation: "1:1 채팅 및 단체 채팅을 할 수 있는 데스탑 애플리케이션",
+    link: "https://feline-channel-3f1.notion.site/Chatting-App-3565b994c00b4610a8a3ec3bdfeabd87",
+    stack: [
+      { name: "NextronJS", color: "#DBECDA" },
+      { name: "TypeScript", color: "#D2E4EF" },
+      { name: "Firebase", color: "#fef08a" },
+      { name: "Tailwindcss", color: "#cffafe" },
+      { name: "Redux", color: "#ece1f4" },
+    ],
+  },
+  {
     src: "/Project/00.png",
     name: "code_review",
     alt: "제작중...",
