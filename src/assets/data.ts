@@ -6,7 +6,7 @@ export const cardList = [
     title: "여기여기 붙어라",
     explanation:
       "원하는 물품을 여러사람이 함께 모여 저렴한 가격으로 구매할 수 있는 공동구매 서비스 제공",
-    link: "https://www.notion.so/a61322d5d3704f9c825b99ce8df1bf46",
+    link: "https://www.notion.so/shin-dong-jae/a61322d5d3704f9c825b99ce8df1bf46?pvs=4",
     stack: [
       { name: "ReactJS", color: "#DBECDA" },
       { name: "TypeScript", color: "#D2E4EF" },
@@ -23,7 +23,7 @@ export const cardList = [
     title: "포트폴리오",
     explanation:
       "About me, Project, Contact 등 개발자 역량을 보여주기 위한 포트폴리오",
-    link: "https://www.notion.so/DongJae-s-Portfolio-fa81cba548684d7eb0b37e5ebcb92d11",
+    link: "https://www.notion.so/shin-dong-jae/DongJae-s-Portfolio-fa81cba548684d7eb0b37e5ebcb92d11?pvs=4",
     stack: [
       { name: "NextJS", color: "#DBECDA" },
       { name: "TypeScript", color: "#D2E4EF" },
@@ -37,7 +37,7 @@ export const cardList = [
     alt: "Chatting App",
     title: "Chatting App",
     explanation: "1:1 채팅 및 단체 채팅을 할 수 있는 데스탑 애플리케이션",
-    link: "https://feline-channel-3f1.notion.site/Chatting-App-3565b994c00b4610a8a3ec3bdfeabd87",
+    link: "https://www.notion.so/shin-dong-jae/Chat-App-3565b994c00b4610a8a3ec3bdfeabd87?pvs=4",
     stack: [
       { name: "NextronJS", color: "#DBECDA" },
       { name: "TypeScript", color: "#D2E4EF" },
