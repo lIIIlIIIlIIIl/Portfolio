@@ -46,6 +46,22 @@ export const cardList = [
       { name: "Redux", color: "#ece1f4" },
     ],
   },
+  {
+    src: "/Project/00.png",
+    name: "Project Full Care",
+    alt: "Project Full Care",
+    title: "Project Full Care",
+    explanation:
+      "사이드 프로젝트를 위한 인원 모집 및 일정 계획, 회의록 등의 다양한 기능을 제공하는 서비스 제공",
+    link: "https://shin-dong-jae.notion.site/Project-Full-Care-515e9efc672041b3a3c40482bbc42e5e?pvs=4",
+    stack: [
+      { name: "ReactJS", color: "#DBECDA" },
+      { name: "TypeScript", color: "#D2E4EF" },
+      { name: "SCSS", color: "#cffafe" },
+      { name: "Redux", color: "#ece1f4" },
+      { name: "React-Query", color: "#FFE2DD" },
+    ],
+  },
 ];
 
 export const aboutList = [
@@ -69,9 +85,9 @@ export const aboutList = [
   },
   {
     src: "/AboutImg/Img04.png",
-    alt: "열정",
-    p1: "무너지지 않는",
-    p2: "정신력",
+    alt: "노력",
+    p1: "좋은 질문",
+    p2: "읽기 쉬운 코드",
   },
 ];
 
@@ -80,66 +96,66 @@ export const imgList = [
     src: "/Logo/html.png",
     alt: "HTML",
     category: "Frontend",
-    etc: "태그를 활용한 마크업",
+    etc: "시멘틱 태그를 사용하여 접근성을 준수하는 구조적 문서를 만드는 것에 능숙합니다.",
   },
   {
     src: "/Logo/css.png",
     alt: "CSS",
     category: "Frontend",
-    etc: "Grid, Flex 레이아웃 활용",
+    etc: "웹을 반응형으로 만들어, 다양한 환경에서도 동일한 UI를 보여주도록 스타일을 작성할 수 있습니다.",
   },
   {
     src: "/Logo/styledcomponents.png",
     alt: "Styled-Components",
     category: "Frontend",
-    etc: "컴포넌트 단위, props 활용",
+    etc: "Global css와 Global Theme, props를 활용하여 스타일링 할 수 있습니다.",
   },
   {
     src: "/Logo/javascript.png",
     alt: "JavaScript",
     category: "Frontend",
-    etc: "모던 자바스크립트 문법",
+    etc: "es6 문법을 사용하는 것에 익숙하고, JavaScript 동작 원리를 이해하고 있습니다.",
   },
   {
     src: "/Logo/typescript.png",
     alt: "TypeScript",
     category: "Frontend",
-    etc: "타입 선언, 문법 지향",
+    etc: "타입 에러를 컴파일 단계에서 확인할 수 있어 안전한 코드를 작성할 수 있습니다.",
   },
   {
     src: "/Logo/reactjs.png",
     alt: "React",
     category: "Frontend",
-    etc: "Hook•Redux•CSS-in-JS 활용",
+    etc: "Virtual DOM의 장단점을 알며, React Hook과 Context API를 능숙하게 사용합니다.",
   },
   {
     src: "/Logo/nextjs.png",
     alt: "Nextjs",
     category: "Frontend",
-    etc: "SSR·SEO 최적화 개발",
+    etc: "SSR과 SEO 최적화에 대해 알고 있습니다.",
   },
   {
     src: "/Logo/redux.png",
     alt: "Redux",
     category: "Frontend",
-    etc: "Redux-toolkit ",
+    etc: "Flux 패턴의 기본적인 동작 원리를 이해하고 있습니다.",
   },
   {
     src: "/Logo/reactquery.png",
     alt: "React-Query",
     category: "Frontend",
-    etc: "서버 API 통신, 데이터 관리",
+    etc: "서버 API 통신 및 서버 데이터 관리를 할 수 있습니다.",
   },
   {
     src: "/Logo/github.png",
     alt: "GitHub",
     category: "Devops",
-    etc: "기본적인 사용법 숙지, 브랜치 활용",
+    etc: "기본적인 사용법 숙지하고 있으며 브랜치 활용할 수 있습니다.",
   },
   {
     src: "/Logo/notion.png",
     alt: "Notion",
     category: "Devops",
-    etc: "협업을 위한 다양한 문서 활용",
+    etc: "협업을 위한 다양한 문서를 작성할 수 있습니다.",
   },
 ];
