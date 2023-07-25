@@ -81,11 +81,13 @@ export const theme: DefaultTheme = {
 <br/>
 
 **모바일**
-![모바일](https://j.gifs.com/K8o3zl.gif)
+![모바일](https://github.com/lIIIlIIIlIIIl/Portfolio/assets/101863629/1e4365c7-c81f-4ab7-9156-f3f33a6e9961)
+
 <br/>
 
 **태블릿**
-![태플릿](https://j.gifs.com/lRyrE7.gif)
+![태플릿](https://github.com/lIIIlIIIlIIIl/Portfolio/assets/101863629/f626fe78-71cc-40ac-ac15-f9a3af7cd034)
+
 <br/>
 
 **데스크탑**
